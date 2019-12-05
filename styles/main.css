@@ -1,0 +1,29 @@
+main {
+  text-align: center;
+}
+
+
+h1 {
+  font-family: helvetica;
+  color: white;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 10px 10px rgba(0,0,0,.5);}
+
+.mdl-card {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 10%;
+  background-color: #CE6B6B;
+
+}
+
+.input{
+  font-family: helvetica;
+  color: white;
+}
+
+ul {
+  color: white;
+}

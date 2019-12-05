@@ -1,32 +1,34 @@
 
-
-function onReady() {
+function onReady(){
    const addToDoForm = document.getElementById('addToDoForm');
    const newToDoText = document.getElementById('newToDoText');
    const toDoList = document.getElementById('toDoList');
+
    addToDoForm.addEventListener('submit', event => {
      event.preventDefault();
 
-     // get the text
      let title = newToDoText.value;
 
-     // create a new li
      let newLi = document.createElement('li');
 
-     // create a new input
      let checkbox = document.createElement('input');
+      checkbox.type = "checkbox";
 
-     // set the input's type to checkbox
-     checkbox.type = "checkbox";
+     let deleteBtn = document.createElement ('button');
+     deleteBtn.textContent = "Delete";
 
-     // set the title
+    deleteBtn.addEventListener('click', function (event){
+    toDoList.removeChild(this.parentElement);
+})
      newLi.textContent = title;
 
-     // attach the checkbox to the li
      newLi.appendChild(checkbox);
 
-     // attach the li to the ul
+     newLi.appendChild(deleteBtn);
+
      toDoList.appendChild(newLi);
+
+     newToDoText.value = '';
 
    });
  }
